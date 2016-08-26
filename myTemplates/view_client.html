@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Search_client_id{% endblock %}
+
+{% block content %}
+    <div id="container1">
+     <h1 align="center">Список пациентов</h1>
+    <table border="1" align="center">
+    <tr><td>ID</td><td>Фамилия</td><td>Имя</td><td>Дата рождения</td><td>Пол</td>
+    <td>Адрес</td><td>Тел. д.</td><td>Тел. м.</td><td>Номер участка</td><td>Примечания</td></tr>
+    {% for fooClient in listClients %}
+        <tr>
+           <td>{{ fooClient.id_t_client }}</td><td>{{ fooClient.surname }}</td><td> {{ fooClient.name}}</td>
+           <td>{{ fooClient.birthday }}</td><td>{{ fooClient.sex }}</td>
+           <td>{{ fooClient.address_residence.city.name }},{{ fooClient.address_residence.area.name }},{{ fooClient.address_residence.district.name }},
+           {{ fooClient.address_residence.street.name }},{{ fooClient.address_residence.house }},
+           {{ fooClient.address_residence.flat }}</td>
+           <td>{{ fooClient.h_number }}</td><td>{{ fooClient.m_number }}</td>
+           <td>{{ fooClient.n_plot_full_id }}</td><td>{{ fooClient.feature.name }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Search_doctor_spec{% endblock %}
+
+{% block content %}
+    <div id="container1">
+     <h1 align="center">Список врачей</h1>
+    <table border="1" align="center">
+    <tr><td>ID</td><td>Фамилия</td><td>Имя</td><td>Отчество</td><td>Специальность</td>
+    <td>Отделение</td><td>Участок</td><td>Кабинет</td></tr>
+    {% for fooDoctor in listDoctor %}
+        <tr>
+           <td>{{ fooDoctor.id_t_doctor }}</td><td>{{ fooDoctor.surname }}</td><td> {{ fooDoctor.name}}</td>
+           <td>{{ fooDoctor.patronymic }}</td><td>{{ fooDoctor.speciality.name }}</td>
+           <td>{{ fooDoctor.speciality.departament.name }}</td>
+           <td>{{ fooDoctor.plot_id }}</td>
+           <td>{{ fooDoctor.cabinet }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    </div>
+{% endblock %}

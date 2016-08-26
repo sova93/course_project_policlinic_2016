@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Statistics{% endblock %}
+
+{% block content %}
+    <div id="container1">
+        <h1 align=center>{{ tab_name }}</h1>
+<script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Участок','Кол. человек'],
+     ['1',{{ plot1 }}],
+     ['2',{{ plot2 }}],
+     ['3',{{ plot3 }}],
+     ['4',{{ plot4 }}]
+    ]);
+    var options = {
+     title: 'Загруженность участка',
+     hAxis: {title: 'Участок'},
+     vAxis: {title: 'Кол. человек'}
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById('plot'));
+    chart.draw(data, options);
+   }
+  </script>
+     <div align=center>
+     <div id="plot"  style="width: 600px; height: 400px;"></div>
+     </div>
+    </div>
+{% endblock %}

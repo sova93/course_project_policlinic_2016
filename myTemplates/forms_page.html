@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Search_client_id{% endblock %}
+
+{% block content %}
+    <div id="container{{ n_size }}">
+    <h1 align=center>{{ tab_name }}</h1>
+    <h2 align=center>{{ err }}</h2>
+    <form method="post" align="{{ align }}" action={{ attr }}>{% csrf_token %}
+       <div id="font">
+       {{ form.as_p }}
+    </div>
+    <h1 align=center><input class="b1" type="submit" value="OK!"></h1>
+    </form>
+    </div>
+{% endblock %}

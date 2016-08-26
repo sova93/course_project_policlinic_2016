@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Visit_list{% endblock %}
+
+{% block content %}
+    <div id="container1">
+     <h1 align="center">Лист посещений</h1>
+    <table border="1" align="center">
+    <tr><td>ID визита</td><td>ФИО пациента</td><td>Дата</td><td>ФИО врача</td><td>Участок</td><td>Место</td>
+    <td>Цель</td><td>Заболевание</td><td>Форма оказания</td></tr>
+    {% for fooVisit in listVisit %}
+        <tr>
+           <td>{{ fooVisit.id_t_docor_visit }}</td>
+           <td>{{ fooVisit.visit.client.surname }} {{ fooVisit.visit.client.name }} {% if fooVisit.visit.client.patronymic  %}{{ fooVisit.visit.client.patronymic }}{% endif %}</td>
+           <td> {{ fooVisit.visit.date}}</td>
+           <td>{{ fooVisit.docor.surname }} {{ fooVisit.docor.name }} {{ fooVisit.docor.patronymic }}</td>
+           <td>{{ fooVisit.docor.plot_id }}</td>
+           <td>{{ fooVisit.visit.place.place }}</td>
+           <td>{{ fooVisit.visit.purpose.purpose }}</td>
+           <td>{{ fooVisit.visit.disease.name }}</td>
+           <td>{{ fooVisit.visit.form }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    </div>
+{% endblock %}

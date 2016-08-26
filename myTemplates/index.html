@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Policlinic{% endblock %}
+{% block content %}
+<div id="container">
+<div id="leftTab">
+	<div class="notebook" id="notebook1">
+ <ul class="tabs">
+  <li><a href="#page1-1">Новости</a></li>
+  <li><a href="#page1-2">Партнеры</a></li>
+ </ul>
+ <ul class="pages">
+  <li class="page" id="page1-1"><script language=JavaScript type="text/javascript"
+src=http://www.medicinform.net/export/mednews_utf.php?countnews=2&tr1=000000&tr2=000000&linia=000000&trshapka=000000&fontshapkus=FFFFFF&widthtab=100></script>
+    </li>
+  <li class="page" id="page1-2">
+      <a href="http://minzdrav.gov.by/ru/static/lekarstvennaya_politika/new_url_708416238"><img border=0 src={% static "images/000958_812820.png" %} width=100% alt="log"></a>
+      <p>...</p>
+      <a href="http://www.medvestnik.by/ru/"><img border=0 src={% static "images/000691_819426.jpg" %} width=95%  alt="log"></a>
+      <p>...</p>
+      <a href="http://minzdrav.gov.by/"><img border=0 src={% static "images/BannerMZ.jpg" %} width=95%  alt="log"></a>
+      <p>...</p>
+</li>
+ </ul>
+</div>
+</div>
+<div id="middleContent">
+    <H1>Внутренний сайт</H1>
+    <h2>25-ой городской детской поликлиники</h2>
+     <embed src="http://dezzi.ru/images/3874571_185a.swf" wmode="transparent" width="700" height="500" <="" embed="">
+</div>
+ </div>
+{% endblock %}

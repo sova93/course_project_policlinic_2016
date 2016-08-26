@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Contacts{% endblock %}
+
+{% block content %}
+    <div id="container">
+    <h1 align="center">Контакты</h1>
+    <div id="container1-1">
+        <h2 align="center"><font size="4" color=white face="Arial">Адрес: </font></h2><h2 align="center">г. Минск, ул. Одинцова, 75</h2>
+    <div align="center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.847571455141!2d27.441474572542024!3d53.8989131556119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x1c8b6e78a2aec1b9!2z0JTQtdGC0YHQutCw0Y8g0L_QvtC70LjQutC70LjQvdC40LrQsCBOIDI1!5e0!3m2!1sru!2sby!4v1450187603408" width="450" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    <h2 align="center"><font size="4" color=white face="Arial">Телефон для справок: </font></h2><h2 align="center">+37517 280 77 80, +37517 201 04 74</h2>
+    </div>
+    <div id="container1-2">
+        <h2 align="center"><font size="4" color=white face="Arial">Телефоны: </font></h2>
+        <table border="2">
+           <tr><td><img border=0 src={% static "images/gl_vrac.jpg" %} width=95% alt="logo">
+           </td>
+               <td><h2 align="center"><font size="4" color=white face="Arial"><p>Покидько</p><p> Ирина Викторовна</p></font></h2><h2 align="center"><font size="4" color=white face="Arial">Главный врач</font></h2>
+               <h2>+375 17 258 15 95</h2></td></tr>
+            <tr><td><img border=0 src={% static "images/lazarchik.jpg" %} width=95% height=85% alt="logo">
+           </td>
+               <td><h2 align="center"><font size="4" color=white face="Arial"><p>Лазарчик</p><p> Людмила Александровна</p></font></h2><h2 align="center"><font size="4" color=white face="Arial">Зам. главного врача по мед. части</font></h2>
+               <h2>+375 17 258 78 97</h2></td></tr>
+            <tr><td><img border=0 src={% static "images/sharangovic.jpg" %} width=95% height=85% alt="logo">
+           </td>
+               <td><h2 align="center"><font size="4" color=white face="Arial"><p>Шарангович</p><p> Наталья Витальевна</p></font></h2><h2 align="center"><font size="4" color=white face="Arial">Зам. главного врача по МЭиР</font></h2>
+               <h2>+375 17 258 04 62</h2></td></tr>
+        </table>
+    </div>
+    </div>
+{% endblock %}

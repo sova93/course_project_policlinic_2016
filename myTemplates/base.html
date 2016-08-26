@@ -1,0 +1,92 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myCSS.css' %}">
+</head>
+<body>
+<div id="wrapper">
+    <a href="#"><img border=0 src={% static "images/log.png" %} width=14%  alt="log"></a>
+    <object type="application/x-shockwave-flash" height="130" width=70% data="http://agitki.ru/_ld/13/1309_ir3.swf"><param name="movie" value="http://agitki.ru/_ld/13/1309_ir3.swf" /><param name="wmode" value="transparent" />
+<param name="allowScriptAccess" value="always" /><param name="flashvars"value="&in_title=25-я городская&&in_title_2=детская поликлиника&&url=http://agitki.ru/load/osnovnoj_razdel/1&"/>  </object>
+   <a href="#"><img border=0 src={% static "images/log.png" %} width=14%  alt="log"></a>
+    <div id="mainmenu">
+    <ul>
+    <!-- Пункт меню 1 -->
+    <li><a href="http://127.0.0.1:8000/">Главная</a></li>
+    <!-- Пункт меню 2 -->
+    <li><a href="#">Поиск</a>
+    <ul>
+       <li><a href="#">Пациент</a>
+           <ul>
+               <li><a href="/search_client_id/">По ID </a></li>
+               <li><a href="/search_client_surename/"> По фамилии</a></li>
+               <li><a href="tbl_firm_rename.html"> </a></li>
+           </ul>
+       </li>
+       <li><a href="#">Участок</a>
+           <ul>
+               <li><a href="/search_plot_client/"> Пациенты</a></li>
+           </ul>
+	   </li>
+        <li><a href="#">Врачи</a>
+           <ul>
+               <li><a href="/search_doctor_spec/"> По специализации</a></li>
+           </ul>
+	   </li>
+    </ul>
+</li>
+
+    <!-- Пункт меню 3 -->
+    <li><a href="#">Статистика</a>
+        <ul>
+       <li><a href="/statistics_view/">Нагрузка на участок</a></li>
+       <li><a href="/statistics_group_view/">Заболевания по группам</a></li>
+    </ul>
+        </li>
+    <!-- Пункт меню 4 -->
+    <li><a href="#">Общие списки</a>
+     <ul>
+       <li><a href="/view_clients/">Пациенты</a></li>
+       <li><a href="/view_doctors/">Врачи</a></li>
+       <li><a href="/view_disease/">Лист посещений</a></li>
+     </ul>
+    </li>
+    <!-- Пункт меню 5 -->
+    <li><a href="/contacts/">Контакты</a></li>
+    </ul><!-- Конец списка -->
+   </div><!-- Конец блока #mainmenu -->
+</div>
+{% block content %}{% endblock %}
+<footer>
+   	<div id="footer">
+
+        <div id="sitemap">
+	<h3>КАРТА</h3>
+    <div>
+        <a href="http://127.0.0.1:8000/">Главная</a>
+        <a href="#">О нас</a>
+        <a href="/contacts/">Контакты</a>
+    </div>
+</div>
+        <div id="social">
+ <h3>СОЦ. СЕТИ</h3>
+    <a href="http://twitter.com/" class="social-icon twitter"></a>
+    <a href="http://facebook.com/" class="social-icon facebook"></a>
+    <a href="http://plus.google.com/" class="social-icon google-plus"></a>
+    <a href="http://vimeo.com/" class="social-icon-small vimeo"></a>
+    <a href="http://youtube.com/" class="social-icon-small youtube"></a>
+    <a href="http://flickr.com/" class="social-icon-small flickr"></a>
+    <a href="http://instagram.com/" class="social-icon-small instagram"></a>
+    <a href="/rss/" class="social-icon-small rss"></a>
+</div>
+        <div id="footer-logo">
+<a href="/"><img border=0 src={% static "images/7996397.png" %} width="70" height="70" alt="logo"></a>
+    <p>Copyright 2015 S_O_Va. creation</p>
+</div>
+    </div>
+</footer>
+</body>
+</html>
